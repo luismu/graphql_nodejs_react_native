@@ -5,6 +5,17 @@ type Status {
     message: String!
 }
 
+type User {
+	_id: ID!
+	userName: String
+	email: String!
+	firstName: String
+	lastName: String
+	avatar: String
+	createdAt: Date!
+	updatedAt: Date!
+}
+
 type Tweet {
     _id: ID!
     text: String!
@@ -20,7 +31,9 @@ type Query{
 type Mutation{
     createTweet(text: String!): Tweet
     updateTweet(_id: ID!, text: String): Tweet
-    deleteTweet(_id: ID!): Status
+		deleteTweet(_id: ID!): Status
+		
+	signup(email: String!, fullname: String!, password: String!, avatar: String, userName: String): User
 }
 
 schema {
