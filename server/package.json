@@ -1,9 +1,7 @@
 {
-  "name": "server-api-clone-twitter",
+  "name": "server",
   "version": "1.0.0",
-  "description": "api graphql server",
   "main": "index.js",
-  "author": "Luis Murillo",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon --exec babel-node src/index.js",
@@ -11,6 +9,7 @@
   },
   "dependencies": {
     "apollo-server-express": "^1.0.2",
+    "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.17.2",
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
@@ -18,6 +17,7 @@
     "graphql": "^0.10.5",
     "graphql-date": "^1.0.3",
     "graphql-tools": "^1.1.0",
+    "jsonwebtoken": "^8.4.0",
     "mongoose": "^4.11.3"
   },
   "devDependencies": {
